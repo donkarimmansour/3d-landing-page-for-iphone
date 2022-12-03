@@ -39,13 +39,13 @@ SSG.propTypes = {
 const {publicRuntimeConfig} = getConfig()
 
 
-export async function getStaticPaths() {
-  const paths = [{param : '1'}]
-  return {
-    paths,
-    fallback: false,
-  }
-}
+// export async function getStaticPaths() {
+//   const paths = [{param : '1'}]
+//   return {
+//     paths,
+//     fallback: false,
+//   }
+// }
 
 
 

@@ -37,14 +37,14 @@ ISG.propTypes = {
 const {publicRuntimeConfig} = getConfig()
 
 
-export async function getStaticPaths() {
-  const paths = [{param : '1'}]
+// export async function getStaticPaths() {
+//   const paths = [{param : '1'}]
 
-  return {
-    paths,
-    fallback: true,
-  }
-}
+//   return {
+//     paths,
+//     fallback: true,
+//   }
+// }
 
 export async function getStaticProps({locale}) {
   return {
