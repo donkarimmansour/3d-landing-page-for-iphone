@@ -23,21 +23,21 @@ module.exports = {
 
 
 
-  webpack: (config, { dev, isServer }) => {
-    // config.module.rules.push({
-    //   test: /\.svg$/,
-    //   use: ['@svgr/webpack'],
-    // })
+  // webpack: (config, { dev, isServer }) => {
+  //   // config.module.rules.push({
+  //   //   test: /\.svg$/,
+  //   //   use: ['@svgr/webpack'],
+  //   // })
 
-    if (!dev && !isServer) {
-      // Replace three with three only in client production build
-      Object.assign(config.resolve.alias, {
-        'three': '~./node_modules/three',
-      })
-    }
+  //   if (!dev && !isServer) {
+  //     // Replace three with three only in client production build
+  //     Object.assign(config.resolve.alias, {
+  //       'three': '~./node_modules/three',
+  //     })
+  //   }
 
-    return config
-  },
+  //   return config
+  // },
 
   // future: {
   //   webpack5: true, // by default, if you customize webpack config, they switch back to version 4. 
