@@ -1,18 +1,16 @@
 import React, { useRef, useLayoutEffect, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useLoader, useThree } from "@react-three/fiber";
+import { useThree } from "@react-three/fiber";
 import getConfig from "next/config";
-import { GLTFLoader } from "three/examples/jsm/loaders/gltfloader";
 
+const {publicRuntimeConfig : { API_URL }} = getConfig()
 
+  
 export default function Model({ bgColor }) {
   const group = useRef();
  
-  const {publicRuntimeConfig} = getConfig()
 
-  // const { nodes, materials } = useLoader(GLTFLoader, "http://localhost:3000/scene.gltf")
-
- const { nodes, materials } = useGLTF("http://localhost:3000/scene.gltf");
+ const { nodes, materials } = useGLTF(`${API_URL}/scene.gltf`);
 
   let camera = useThree((state) => state.camera);
 
@@ -159,5 +157,5 @@ export default function Model({ bgColor }) {
   );
 }
 
-useGLTF.preload("http://localhost:3000/scene.gltf");
+useGLTF.preload(`${API_URL}/scene.gltf`);
  
