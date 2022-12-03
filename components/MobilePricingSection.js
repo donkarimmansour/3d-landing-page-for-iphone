@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic'
 import Spinner from "./Spinner";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
-const Model = dynamic(() => import("../3d/Scene"), {  
+const Model = dynamic(() => import("../3d/scene"), {  
    ssr: false,
 }) 
  
